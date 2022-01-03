@@ -51,6 +51,15 @@ cat <<EOF >/etc/v2ray/config.json
     "log": {
         "loglevel": "warning"
     },
+"routing": { 
+"domainStrategy": "AsIs", 
+"rules": [ 
+{ "type": "field", 
+"ip": [ "geoip:private" ], 
+"outboundTag": "block" 
+} 
+] 
+},
     "inbounds": [
         {
             "listen": "0.0.0.0",
